@@ -3,20 +3,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
-/**
- * Tugas 1 - Dasar GUI Swing dan Layout
- * IF21W0508 - Praktikum Pemrograman II
- * Nama : Derania Safa Zaina
- * NPM  : 243040038
- * Kelas: C
- *
- * Aplikasi formulir pendaftaran kegiatan.
- * Layout manager yang dipakai:
- *  - BorderLayout     : kerangka utama frame + panel catatan
- *  - GridBagLayout    : panel identitas (label dan input rapi, ikut melebar)
- *  - GridLayout       : kelompok radio dan checkbox
- *  - FlowLayout       : panel tombol
- */
 public class FormPendaftaranKegiatan extends JFrame {
 
     // Identitas
