@@ -1,8 +1,16 @@
-// src/KartuProfil.jsx
-import React from "react";
+// src/kartuprofil.tsx
+
+// Tipe props (wajib di TypeScript)
+type KartuProfilProps = {
+  nama: string;
+  npm: string;
+  kelas: string;
+  status: string;
+  fotoUrl?: string; // tanda ? = boleh tidak diisi
+};
 
 // Komponen Functional menerima properti (props) melalui parameter fungsi
-function KartuProfil({ nama, npm, kelas, status, fotoUrl }) {
+function KartuProfil({ nama, npm, kelas, status, fotoUrl }: KartuProfilProps) {
   return (
     <div
       style={{
@@ -17,7 +25,7 @@ function KartuProfil({ nama, npm, kelas, status, fotoUrl }) {
     >
       <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
         <img
-          src={fotoUrl || "https://via.placeholder.com/80"}
+          src={fotoUrl || "/avatar.svg"}
           alt={`Foto ${nama}`}
           style={{
             width: "80px",
@@ -29,8 +37,7 @@ function KartuProfil({ nama, npm, kelas, status, fotoUrl }) {
         <div>
           <h3 style={{ margin: "0 0 4px 0", color: "#1B365D" }}>{nama}</h3>
           <p style={{ margin: "2px 0", fontSize: "14px", color: "#555" }}>
-            NPM:
-            <strong>{npm}</strong>
+            NPM: <strong>{npm}</strong>
           </p>
           <p style={{ margin: "2px 0", fontSize: "14px", color: "#555" }}>
             Kelas: {kelas}
